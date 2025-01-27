@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #FAFAF8;
+}
+
+#top-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+#claude-pic {
+  height: 70px;
+}
+
+#heading {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(16, 16, 16);
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5vh;
+  padding: 5px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: calc(100px - 14px);
+  height: 50px;
+  border-radius: 50px;
+  background: 
+   radial-gradient(farthest-side,#0000 calc(100% - 15px),#ccc calc(100% - 14px) 99%,#0000) left,
+   radial-gradient(farthest-side,#0000 calc(100% - 15px),#ccc calc(100% - 14px) 99%,#0000) right;
+  background-size: calc(50% + 7px) 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: l10-0 1s infinite linear;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto; 
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f03355;
+  transform-origin: -14px 50%;
+  animation: l10-1 0.5s infinite linear;
+}
+@keyframes l10-0 { 
+    0%,49.99% { transform:scaleX(1)}
+    50%,100% { transform:scaleX(-1)} 
+}
+@keyframes l10-1 { 
+    100% { transform:rotate(1turn)} 
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+#list-adder {
+  height: 35px; 
+  width: 600px;
+  box-shadow: none;
+  padding: 0 10px;
+  border: 1.5px solid #D1D5D8;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.05);
+}
+
+#submit1 {
+  height: 35px; 
+  min-width: 100px; 
+  width: max(15%, 150px); 
+  background-color: #141413;
+  color: #FAFAF8;
+  border: none;
+  border-radius: 6px; 
+  padding: 0 15px; 
+}
+
+#list {
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#option {
+  display: flex;
+  justify-content: center; /* Changed from space-between */
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+  margin-top: 20px;
+  width: 400px; /* Added fixed width */
+  background-color: #F0EFEB;
+  padding: 10px 28px;
+  height: 120px;
+}
+
+#option button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(16, 16, 16);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#list-empty {
+  align-self: center;
+}
+
+#clear {
+  height: 35px; 
+  min-width: 100px; 
+  width: max(15%, 150px); 
+  background-color: #141413;
+  color: #FAFAF8;
+  border: none;
+  border-radius: 6px; 
+  padding: 0 15px;  
+  
+}
+
+ul {
+  margin-left: 10vh;
+}
+
+#listAndOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  gap: 100px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+.suggested-recipe-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  color: #0066ff;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  font-weight: 400;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.suggested-recipe-container h1,
+.suggested-recipe-container h2,
+.suggested-recipe-container h3,
+.suggested-recipe-container p {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.suggested-recipe-container ul li, 
+.suggested-recipe-container ol li {
+  margin-bottom: 8px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 100%;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+  }
+
+  #list-adder {
+    width: 80%; 
+  }
+
+  #submit1 {
+    width: 50%; 
+  }
+
+  #clear {
+    width: 50%;
+  }
+
+  #listAndOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 10vh;
+  }
+
+  #list div {
+    margin-left: 20px;
+  }
+
+  #option {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
