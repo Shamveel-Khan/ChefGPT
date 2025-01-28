@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Response from "./reponse";
 import List from "./List";
 import { getRecipeFromMistral } from "../ai";
-import { use } from "react";
 
 export default function Main() {
     const [loading,setLoading] = useState(false)
@@ -98,7 +97,10 @@ export default function Main() {
                 {addRecipe()}
             </div>
             <br /><br />
-            <Response result={recipe}/>
+            {ingredients.length >0
+                ?<Response result={recipe}/>
+                :null
+            }
         </section>
         </>
     )
