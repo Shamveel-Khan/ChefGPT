@@ -202,6 +202,100 @@ li {
   overflow-wrap: break-word;
 }
 
+/* Base styles for list container */
+#list {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+#list div {
+  width: 100%;
+}
+
+#list h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(16, 16, 16);
+  margin-bottom: 10px;
+  padding: 0 16px;
+}
+
+#list ul {
+  margin-left: 10vh;
+  list-style-position: outside;
+  padding-right: 16px;
+}
+
+#list li {
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+#listAndOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  #list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #list div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #list h2 {
+    padding: 0 16px;
+    font-size: 1.75rem;
+  }
+
+  #list ul {
+    margin: 0;
+    padding: 0 32px;  /* Increased padding to ensure list bullets are visible */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #list li {
+    margin: 10px 0;
+    padding-right: 16px;
+  }
+
+  #listAndOptions {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+  }
+
+  #option {
+    margin: 0;
+    width: calc(100% - 32px);  /* Account for padding */
+    max-width: 400px;
+  }
+
+  #list-empty {
+    width: 100%;
+    text-align: center;
+    padding: 0 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   form {
     width: 100%;
