@@ -6,6 +6,15 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  function openGithub() {
+    window.open('https://github.com/shamveelkhan?tab=overview&from=2025-01-01&to=2025-01-07', '_blank');
+  }
+  function openInsta() {
+    window.open('https://www.instagram.com/shamveel.khan.982/', '_blank');
+  }
+  function openLinkedin() {
+    window.open('https://www.linkedin.com/in/shamveel-khilji-78a74a345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank');
+  }
 
   return (
     <div>
@@ -26,9 +35,15 @@ const Sidebar = () => {
 Feel free to connect with me through the links below! 
         </p>
         <div id="iconHolder">
-          <img className="iconsS" src="github.svg" alt="github-icon" /> 
-          <img className="icons" src="instagram.svg" alt="github-icon" /> 
-          <img className="icons" src="linkedin.svg" alt="github-icon" />           
+          <img
+            onClick={openGithub}
+            id="github" className="iconsS" src="github.svg" alt="github-icon" /> 
+          <img 
+            onClick={openInsta}
+            id="insta" className="icons" src="instagram.svg" alt="github-icon" /> 
+          <img
+            onClick={openLinkedin} 
+            id="linkedin" className="icons" src="linkedin.svg" alt="github-icon" />           
         </div>
       </div>
     </div>
