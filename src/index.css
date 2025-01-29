@@ -30,6 +30,7 @@ body {
 }
 
 #iconHolder {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -39,6 +40,13 @@ body {
   margin-left: 30px;
   height: 70px;
   width: 70px;
+  cursor: pointer;
+}
+
+.iconsS {
+  margin-left: 30px;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
 }
 
@@ -457,4 +465,7 @@ li {
     left: 0;
   }
 
+  #iconHolder {
+    margin-left: 10px;
+  }
 }

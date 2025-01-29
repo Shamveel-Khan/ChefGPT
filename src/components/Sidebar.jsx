@@ -27,7 +27,7 @@ Feel free to connect with me through the links below!
         </p>
         <div id="iconHolder">
           <img className="icons" src="github.svg" alt="github-icon" /> 
-          <img className="icons" src="instagram.svg" alt="github-icon" /> 
+          <img className="iconsS" src="instagram.svg" alt="github-icon" /> 
           <img className="icons" src="linkedin.svg" alt="github-icon" />           
         </div>
       </div>
