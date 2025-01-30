@@ -5,9 +5,6 @@ ChefGPT is a web app that generates recipes based on the ingredients you enter! 
 ## 🚀 Live Demo
 [Try ChefGPT Now!](https://chef-gpt-shamveel-khans-projects.vercel.app/)
 
-## 📂 Repository
-[GitHub Repo](https://github.com/Shamveel-Khan/ChefGPT)
-
 ## ✨ Features
 - 🔍 **AI-powered recipe generation** using Mixtral AI
 - 🖥️ **User-friendly interface** built with React
