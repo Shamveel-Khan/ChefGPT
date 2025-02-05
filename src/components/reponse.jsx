@@ -1,11 +1,14 @@
-import Markdown from 'react-markdown'
+import Markdown from 'react-markdown';
+import React from 'react';
 
-export default function Response(props) {
+const Response = React.forwardRef((props, ref) => {
     return (
         <section id="suggested-recipe-container">
-            <Markdown>
-                {props.result}
-            </Markdown>
+            <div ref={ref}>
+                <Markdown>{props.result}</Markdown>
+            </div>
         </section>
-    )
-}
+    );
+});
+
+export default Response;

@@ -7,6 +7,12 @@ export default function Main() {
     const [loading,setLoading] = useState(false)
     const [ingredients, setIngredients] = useState([]);
     const [recipe, setRecipe] = useState("")
+    const recipeRef = React.useRef(null)
+    React.useEffect(()=> {
+        if(recipe !== "" && recipeRef.current !== null) {
+            recipeRef.current.scrollIntoView({behavior: "smooth"});
+        }
+    },[recipe])
     function handleSubmit(event) {
         event.preventDefault()
         const formData = new FormData(event.currentTarget);
@@ -88,7 +94,7 @@ export default function Main() {
                 {ingredients.length > 0 
                     ?<button id="clear" onClick={clearIngredients}>Clear ingredients</button>
                     :null
-}
+                }
             </form>
         </div>
         <section id="main">
@@ -98,7 +104,10 @@ export default function Main() {
             </div>
             <br /><br />
             {ingredients.length >0
-                ?<Response result={recipe}/>
+                ?<Response 
+                    ref={recipeRef}
+                    result={recipe}
+                />
                 :null
             }
         </section>
